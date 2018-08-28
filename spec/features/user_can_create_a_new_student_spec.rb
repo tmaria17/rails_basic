@@ -7,7 +7,7 @@ describe "user creates a new student" do
         fill_in "student[name]", with: "Kat"
         click_on "Create Student"
         #save_and_open_page
-
+        expect(current_path).to eq(student_path(Student.last))
         expect(page).to have_content("Kat")
       end
 end
