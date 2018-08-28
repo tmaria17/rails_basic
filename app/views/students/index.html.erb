@@ -1,0 +1,11 @@
+
+<%= link_to "Create a New Student", new_student_path, class: "new-student" %>
+<%= link_to "All Students", students_path, class: "all-students" %>
+
+<% @students.each do |student| %>
+  <ul>
+    <li> Name:<%= student.name %></li>
+    <li><%= link_to "Delete", student_path(student), method: :delete %></li>
+
+  </ul>
+  <%end%>
