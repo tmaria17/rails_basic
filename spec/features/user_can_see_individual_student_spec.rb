@@ -5,7 +5,6 @@ describe 'student show page' do
     it "displays information for one student" do
       student_1 = Student.create!(name: "John")
       student_2 = Student.create!(name: "Maria")
-      save_and_open_page
 
       visit student_path(student_1)
 
